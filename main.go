@@ -16,8 +16,8 @@ var (
 	//MessageType  = flag.String("type", "text", "Lark message type")
 )
 
-func main(){
-	//fmt.Println("hello")
+func main() {
+	fmt.Println("hello")
 
 	//
 	flag.Parse()
@@ -30,7 +30,6 @@ func main(){
 	}
 	fmt.Printf("发送飞书成功：哈哈\n")
 }
-
 
 //请求的结构（json)
 type ReqData struct {
@@ -60,7 +59,7 @@ func SendMessage(msg string) error {
 		Content: struct {
 			Text string `json:"text"`
 		}{
-			Text: msg,//设置发送的内容
+			Text: msg, //设置发送的内容
 		},
 	}
 
@@ -99,4 +98,3 @@ func SendMessage(msg string) error {
 
 	return nil
 }
-
